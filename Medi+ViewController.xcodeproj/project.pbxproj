@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		9AB9DD2E2A4D19F7002B311B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9AB9DD302A4D28FE002B311B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		9ACCBDC62A4BC461006B89FD /* AppWithViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppWithViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ACCBDC62A4BC461006B89FD /* Medi+ViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Medi+ViewController.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACCBDC92A4BC461006B89FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ACCBDCB2A4BC461006B89FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9ACCBDCD2A4BC461006B89FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		9ACCBDC72A4BC461006B89FD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9ACCBDC62A4BC461006B89FD /* AppWithViewController.app */,
+				9ACCBDC62A4BC461006B89FD /* Medi+ViewController.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,9 +76,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9ACCBDC52A4BC461006B89FD /* AppWithViewController */ = {
+		9ACCBDC52A4BC461006B89FD /* Medi+ViewController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9ACCBDDA2A4BC466006B89FD /* Build configuration list for PBXNativeTarget "AppWithViewController" */;
+			buildConfigurationList = 9ACCBDDA2A4BC466006B89FD /* Build configuration list for PBXNativeTarget "Medi+ViewController" */;
 			buildPhases = (
 				9ACCBDC22A4BC461006B89FD /* Sources */,
 				9ACCBDC32A4BC461006B89FD /* Frameworks */,
@@ -88,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = AppWithViewController;
+			name = "Medi+ViewController";
 			productName = AppWithViewController;
-			productReference = 9ACCBDC62A4BC461006B89FD /* AppWithViewController.app */;
+			productReference = 9ACCBDC62A4BC461006B89FD /* Medi+ViewController.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +108,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9ACCBDC12A4BC461006B89FD /* Build configuration list for PBXProject "AppWithViewController" */;
+			buildConfigurationList = 9ACCBDC12A4BC461006B89FD /* Build configuration list for PBXProject "Medi+ViewController" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,7 +121,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9ACCBDC52A4BC461006B89FD /* AppWithViewController */,
+				9ACCBDC52A4BC461006B89FD /* Medi+ViewController */,
 			);
 		};
 /* End PBXProject section */
@@ -345,7 +345,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9ACCBDC12A4BC461006B89FD /* Build configuration list for PBXProject "AppWithViewController" */ = {
+		9ACCBDC12A4BC461006B89FD /* Build configuration list for PBXProject "Medi+ViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9ACCBDD82A4BC466006B89FD /* Debug */,
@@ -354,7 +354,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9ACCBDDA2A4BC466006B89FD /* Build configuration list for PBXNativeTarget "AppWithViewController" */ = {
+		9ACCBDDA2A4BC466006B89FD /* Build configuration list for PBXNativeTarget "Medi+ViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9ACCBDDB2A4BC466006B89FD /* Debug */,
