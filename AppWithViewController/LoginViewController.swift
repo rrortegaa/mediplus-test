@@ -19,25 +19,19 @@ class LoginViewController: UIViewController {
     var facebookButton: UIButton?
     var googleButton: UIButton?
     var emailIcon: UIImageView?
-    var passwordIcon: UIImageView?    
-    var brightBlue = UIColor(red: 66/255, green: 209/255, blue: 245/255, alpha: 1)
-    var lightGrey = UIColor(red: 230/255, green: 232/255, blue: 233/255, alpha: 1)
-    var darkNavy = UIColor(red: 17/255, green: 31/255, blue: 74/255, alpha: 1)
-    var lightNavy = UIColor(red: 104/255, green: 110/255, blue: 142/255, alpha: 1)
-    var facebookColor = UIColor(red: 63/255, green: 81/255, blue: 181/255, alpha: 1)
-    var googleColor = UIColor(red: 41/255, green: 121/255, blue: 255/255, alpha: 1)
+    var passwordIcon: UIImageView?
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor.backgroundColor
         initElements()
     }
     
     func initElements() {
         //signInformContainer = UIView(frame: CGRect(x: 0, y: 0, width: width, height: height))
         signInformContainer = UIView()
-        signInformContainer?.backgroundColor = lightNavy
+        signInformContainer?.backgroundColor = UIColor.lightNavy
         view.addSubview(signInformContainer!)
         
         signInformContainer?.translatesAutoresizingMaskIntoConstraints = false
@@ -52,7 +46,7 @@ class LoginViewController: UIViewController {
         
         titleLabel = UILabel(frame: CGRect(x: 0, y: 100, width: width, height: 100))
         titleLabel?.textAlignment = .center
-        titleLabel?.textColor = darkNavy
+        titleLabel?.textColor = UIColor.darkNavy
         titleLabel?.font = UIFont(name: "Arial Bold", size: 28)
         titleLabel?.text = "Inicio de sesión"
         view.addSubview(titleLabel!)
@@ -65,11 +59,11 @@ class LoginViewController: UIViewController {
         
         emailTextField = UITextField(frame: CGRect(x: 50, y: 30, width: 260, height: 50))
         emailTextField?.placeholder = "john@doe.com"
-        emailTextField?.backgroundColor = lightNavy
+        emailTextField?.backgroundColor = UIColor.lightNavy
         emailTextField?.borderStyle = .roundedRect
         emailTextField?.borderRect(forBounds: CGRect(x: 5, y: 5, width: 20, height: 20))
         emailTextField?.clearsOnBeginEditing = true
-        emailTextField?.textColor = lightGrey
+        emailTextField?.textColor = UIColor.lightGrey
         emailTextField?.font = UIFont(name: "Arial Bold", size: 18)
         emailTextField?.text = "Correo electrónico"
         signInformContainer?.addSubview(emailTextField!)
@@ -82,20 +76,21 @@ class LoginViewController: UIViewController {
         
         passwordTextField = UITextField(frame: CGRect(x: 50, y: 110, width: 260, height: 50))
         passwordTextField?.placeholder = "********"
-        passwordTextField?.backgroundColor = lightNavy
+        passwordTextField?.backgroundColor = UIColor.lightNavy
         passwordTextField?.borderStyle = .roundedRect
         passwordTextField?.clearsOnBeginEditing = true
-        passwordTextField?.textColor = lightGrey
+        passwordTextField?.textColor = UIColor.lightGrey
         passwordTextField?.font = UIFont(name: "Arial Bold", size: 18)
         passwordTextField?.text = "Contraseña"
         signInformContainer?.addSubview(passwordTextField!)
         
         
-        signInButton = UIButton(frame: CGRect(x: 15, y: 200, width: 295, height: 50))
-        signInButton?.backgroundColor = darkNavy
-        signInButton?.layer.cornerRadius = 12
-        signInButton?.setTitle("Iniciar sesión", for: .normal)
-        signInformContainer?.addSubview(signInButton!)
+        ///  signInButton = UIButton(frame: CGRect(x: 15, y: 200, width: 295, height: 50))
+        let signInButton  = UIButton(frame: .zero)
+        signInButton.backgroundColor = UIColor.darkNavy
+        signInButton.layer.cornerRadius = 12
+        signInButton.setTitle("Iniciar sesión", for: .normal)
+        signInformContainer?.addSubview(signInButton)
         
         
         signInWithContainer = UIView()
@@ -111,14 +106,14 @@ class LoginViewController: UIViewController {
         
         
         facebookButton = UIButton(frame: CGRect(x: 15, y: 10, width: 295, height: 50))
-        facebookButton?.backgroundColor = facebookColor
+        facebookButton?.backgroundColor = UIColor.facebookColor
         facebookButton?.layer.cornerRadius = 2
         facebookButton?.setTitle("Sign In with Facebook", for: .normal)
         signInWithContainer?.addSubview(facebookButton!)
         
         
         googleButton = UIButton(frame: CGRect(x: 15, y: 70, width: 295, height: 50))
-        googleButton?.backgroundColor = googleColor
+        googleButton?.backgroundColor = UIColor.googleColor
         googleButton?.layer.cornerRadius = 2
         googleButton?.setTitle("Sign in with Google", for: .normal)
         signInWithContainer?.addSubview(googleButton!)

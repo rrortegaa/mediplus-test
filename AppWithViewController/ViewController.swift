@@ -9,30 +9,24 @@ import UIKit
 
 class ViewController: UIViewController {
     var newView: UIView?
-    var height = UIScreen.main.bounds.height
-    var width = UIScreen.main.bounds.width
     var firstImage: UIImageView?
     var titleLabel: UILabel?
     var signInButton: UIButton?
     var signUpButton: UIButton?
-    var brightBlue = UIColor(red: 66/255, green: 209/255, blue: 245/255, alpha: 1)
-    var darkNavy = UIColor(red: 17/255, green: 31/255, blue: 74/255, alpha: 1)
-    var lightNavy = UIColor(red: 104/255, green: 110/255, blue: 142/255, alpha: 1)
-    var primaryLightColor = UIColor(red: 228/255, green: 254/255, blue: 255/255, alpha: 1)
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor.backgroundColor
         initElements()
     }
 
     // Función para inicializar elementos
     func initElements() {
         // Step 1: Inicializar variable
-        newView = UIView(frame: CGRect(x: 0, y: 0, width: width, height: height))
+        newView = UIView(frame: CGRect(x: 0, y: 0, width: Constants.width, height: Constants.height))
         // Step 2: configurar atributos
-        newView?.backgroundColor = .white
+        newView?.backgroundColor = UIColor.backgroundColor
         // Step 3: Agregar variable a la vista
         view.addSubview(newView!)
         
@@ -48,10 +42,10 @@ class ViewController: UIViewController {
         
         
         // Step 1: Inicializar variable
-        titleLabel = UILabel(frame: CGRect(x: 0, y: 320, width: width, height: 100))
+        titleLabel = UILabel(frame: CGRect(x: 0, y: 320, width: Constants.width, height: 100))
         // Step 2: configurar atributos
         titleLabel?.textAlignment = .center
-        titleLabel?.textColor = darkNavy
+        titleLabel?.textColor = .darkNavy
         titleLabel?.font = UIFont(name: "Arial Bold", size: 28.0)
         titleLabel?.text = "Bienvenido"
         // Step 3: Agregar variable a la vista
@@ -59,9 +53,9 @@ class ViewController: UIViewController {
         
         
         // Step 1: Inicializar variable
-        signInButton = UIButton(frame: CGRect(x: 30, y: 430, width: width-60, height: 50))
+        signInButton = UIButton(frame: CGRect(x: 30, y: 430, width: Constants.width-60, height: 50))
         // Step 2: configurar atributos
-        signInButton?.backgroundColor = brightBlue
+        signInButton?.backgroundColor = UIColor.brightBlue
         signInButton?.layer.cornerRadius = 12
         signInButton?.setTitle("Iniciar sesión", for: .normal)
         signInButton?.addTarget(self, action: #selector(goToSignInScreen), for: .touchUpInside)
@@ -70,9 +64,9 @@ class ViewController: UIViewController {
         
         
         // Step 1: Inicializar variable
-        signUpButton = UIButton(frame: CGRect(x: 30, y: 500, width: width-60, height: 50))
+        signUpButton = UIButton(frame: CGRect(x: 30, y: 500, width: Constants.width-60, height: 50))
         // Step 2: configurar atributos
-        signUpButton?.backgroundColor = darkNavy
+        signUpButton?.backgroundColor = UIColor.darkNavy
         signUpButton?.layer.cornerRadius = 12
         signUpButton?.setTitle("Registrarse", for: .normal)
         signUpButton?.addTarget(self, action: #selector(gotoSignUpScreen), for: .touchUpInside)
@@ -88,7 +82,8 @@ class ViewController: UIViewController {
     }
     
     @objc func gotoSignUpScreen() {
-        let signUpViewController = SignUpViewController()
+        // let signUpViewController = SignUpViewController()
+        let signUpViewController = SignUpTestViewController()
         print("signUpButton pressed")
         present(signUpViewController, animated: true)
     }

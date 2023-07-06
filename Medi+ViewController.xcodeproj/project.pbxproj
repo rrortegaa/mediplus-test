@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A3041B12A53B7FA00EE62C0 /* MoviesTableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3041B02A53B7FA00EE62C0 /* MoviesTableTableViewCell.swift */; };
+		9A9436DE2A5653BB009D8902 /* UIColorCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9436DD2A5653BB009D8902 /* UIColorCustom.swift */; };
+		9A9436E02A5659E2009D8902 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9436DF2A5659E2009D8902 /* Constants.swift */; };
+		9AA381962A4FD3BC004B096E /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA381952A4FD3BC004B096E /* MoviesViewController.swift */; };
+		9AA381982A4FD3E7004B096E /* MoviesObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA381972A4FD3E7004B096E /* MoviesObject.swift */; };
 		9AB9DD2F2A4D19F7002B311B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9DD2E2A4D19F7002B311B /* LoginViewController.swift */; };
 		9AB9DD312A4D28FE002B311B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9DD302A4D28FE002B311B /* SignUpViewController.swift */; };
+		9ABD4B002A4FBDA300C126CB /* SignUpTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABD4AFF2A4FBDA300C126CB /* SignUpTestViewController.swift */; };
 		9ACCBDCA2A4BC461006B89FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACCBDC92A4BC461006B89FD /* AppDelegate.swift */; };
 		9ACCBDCC2A4BC461006B89FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACCBDCB2A4BC461006B89FD /* SceneDelegate.swift */; };
 		9ACCBDCE2A4BC461006B89FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACCBDCD2A4BC461006B89FD /* ViewController.swift */; };
@@ -18,8 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A3041B02A53B7FA00EE62C0 /* MoviesTableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableTableViewCell.swift; sourceTree = "<group>"; };
+		9A9436DD2A5653BB009D8902 /* UIColorCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorCustom.swift; sourceTree = "<group>"; };
+		9A9436DF2A5659E2009D8902 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9AA381952A4FD3BC004B096E /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		9AA381972A4FD3E7004B096E /* MoviesObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesObject.swift; sourceTree = "<group>"; };
 		9AB9DD2E2A4D19F7002B311B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9AB9DD302A4D28FE002B311B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		9ABD4AFF2A4FBDA300C126CB /* SignUpTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTestViewController.swift; sourceTree = "<group>"; };
 		9ACCBDC62A4BC461006B89FD /* Medi+ViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Medi+ViewController.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACCBDC92A4BC461006B89FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ACCBDCB2A4BC461006B89FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +53,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A9436DC2A565362009D8902 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9A9436DD2A5653BB009D8902 /* UIColorCustom.swift */,
+				9A9436DF2A5659E2009D8902 /* Constants.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9AA381942A4FD38E004B096E /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				9ACCBDC92A4BC461006B89FD /* AppDelegate.swift */,
+				9AA381952A4FD3BC004B096E /* MoviesViewController.swift */,
+				9AA381972A4FD3E7004B096E /* MoviesObject.swift */,
+				9A3041B02A53B7FA00EE62C0 /* MoviesTableTableViewCell.swift */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
 		9ACCBDBD2A4BC461006B89FD = {
 			isa = PBXGroup;
 			children = (
@@ -60,11 +92,13 @@
 		9ACCBDC82A4BC461006B89FD /* AppWithViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9ACCBDC92A4BC461006B89FD /* AppDelegate.swift */,
+				9A9436DC2A565362009D8902 /* Extensions */,
+				9AA381942A4FD38E004B096E /* Movies */,
 				9ACCBDCB2A4BC461006B89FD /* SceneDelegate.swift */,
 				9ACCBDCD2A4BC461006B89FD /* ViewController.swift */,
 				9AB9DD2E2A4D19F7002B311B /* LoginViewController.swift */,
 				9AB9DD302A4D28FE002B311B /* SignUpViewController.swift */,
+				9ABD4AFF2A4FBDA300C126CB /* SignUpTestViewController.swift */,
 				9ACCBDCF2A4BC461006B89FD /* Main.storyboard */,
 				9ACCBDD22A4BC466006B89FD /* Assets.xcassets */,
 				9ACCBDD42A4BC466006B89FD /* LaunchScreen.storyboard */,
@@ -144,11 +178,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A3041B12A53B7FA00EE62C0 /* MoviesTableTableViewCell.swift in Sources */,
+				9A9436E02A5659E2009D8902 /* Constants.swift in Sources */,
 				9AB9DD2F2A4D19F7002B311B /* LoginViewController.swift in Sources */,
 				9ACCBDCE2A4BC461006B89FD /* ViewController.swift in Sources */,
 				9ACCBDCA2A4BC461006B89FD /* AppDelegate.swift in Sources */,
 				9ACCBDCC2A4BC461006B89FD /* SceneDelegate.swift in Sources */,
+				9ABD4B002A4FBDA300C126CB /* SignUpTestViewController.swift in Sources */,
+				9AA381962A4FD3BC004B096E /* MoviesViewController.swift in Sources */,
 				9AB9DD312A4D28FE002B311B /* SignUpViewController.swift in Sources */,
+				9AA381982A4FD3E7004B096E /* MoviesObject.swift in Sources */,
+				9A9436DE2A5653BB009D8902 /* UIColorCustom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
