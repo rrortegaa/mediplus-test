@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         titleLabel = UILabel(frame: CGRect(x: 0, y: 320, width: Constants.width, height: 100))
         // Step 2: configurar atributos
         titleLabel?.textAlignment = .center
-        titleLabel?.textColor = .darkNavy
+        titleLabel?.textColor = UIColor.darkNavy
         titleLabel?.font = UIFont(name: "Arial Bold", size: 28.0)
         titleLabel?.text = "Bienvenido"
         // Step 3: Agregar variable a la vista

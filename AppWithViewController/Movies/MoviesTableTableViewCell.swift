@@ -49,12 +49,20 @@ class MoviesTableTableViewCell: UITableViewCell {
         //movieName?.backgroundColor = .white
         self.addSubview(movieName!)
         
+        movieYear = UILabel(frame: CGRect(x: 93, y: 35, width: 50, height: 15))
+        movieYear?.text = String(movie?.year ?? 0)
+        movieYear?.textAlignment = .left
+        movieYear?.font = .italicSystemFont(ofSize: 15)
+        movieYear?.textColor = UIColor.darkNavy
+        // movieYear?.backgroundColor = .lightGrey
+        self.addSubview(movieYear!)
+        
         movieClasification = UILabel(frame: CGRect(x: 160, y: 35, width: 25, height: 15))
         movieClasification?.text = movie?.clasification
         movieClasification?.textAlignment = .left
         movieClasification?.font = .italicSystemFont(ofSize: 15)
         movieClasification?.textColor = UIColor.darkNavy
-        movieClasification?.backgroundColor = .lightGrey
+        // movieClasification?.backgroundColor = .lightGrey
         self.addSubview(movieClasification!)
         
         movieDescription = UILabel(frame: CGRect(x: 93, y: 55, width: 285, height: 50))
@@ -66,8 +74,8 @@ class MoviesTableTableViewCell: UITableViewCell {
         movieDescription?.textColor = UIColor.darkNavy
         //movieDescription?.backgroundColor = .brightBlue
         self.addSubview(movieDescription!)
-        
     }
+    
     required init?(coder: NSCoder) {
         fatalError("Init has not been implemented")
     }
