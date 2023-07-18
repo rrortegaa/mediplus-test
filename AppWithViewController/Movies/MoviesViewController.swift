@@ -27,18 +27,42 @@ class MoviesViewController: UIViewController {
         tableView?.dataSource = self
         view.addSubview(tableView!)
         
-        /*
-         moviesCollectionView = {
+
+        moviesCollectionView = {
             let layout = UICollectionViewFlowLayout()
             layout.scrollDirection = .horizontal
             layout.minimumLineSpacing = Constants.width/15
             layout.minimumInteritemSpacing = Constants.width/10
             
-        }
-         */
+            let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+            collection.register(MovieCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+            collection.isPagingEnabled = true
+            collection.translatesAutoresizingMaskIntoConstraints
+            collection.backgroundColor = .clear
+            collection.showsVerticalScrollIndicator = true
+            collection.showsHorizontalScrollIndicator = true
+            return collection
+        }()
+         
+    }
+    func setConstraints() {
+        // con esta línea se eliminan los paréntesis de moviesCollectionView?. ...
+        guard let moviesCollectionView = moviesCollectionView else { return }
+        
+        moviesCollectionView.delegate = self
+        moviesCollectionView.dataSource = self
+        view.addSubview(moviesCollectionView)
+        
+        NSLayoutConstraint.activate([
+            moviesCollectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
+            moviesCollectionView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            moviesCollectionView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
+            moviesCollectionView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.2)
+        ])
     }
 }
 
+//MARK: - TableView Extensions
 extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
     // Cuantas celdas tiene la table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -96,4 +120,18 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
         
         return view
     }
+}
+
+// MARK: - CollectionView Extensions
+
+extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+    
 }
